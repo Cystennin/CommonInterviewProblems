@@ -11,7 +11,7 @@ namespace Raven.Personal.CommonInterviewProblems.Tests.DataStructures
         public void WhenToStringIsCalled_WithSingleElementList_ReturnsA_Arrow_Null()
         {
             string[] valueList = { "A" };
-            INode<string> list = valueList.CreateFrom();
+            INode<string> list = valueList.ToSinglyLinkedList();
             Assert.AreEqual("A->NULL", list.ToString());
         }
 
@@ -20,7 +20,7 @@ namespace Raven.Personal.CommonInterviewProblems.Tests.DataStructures
         public void WhenToStringIsCalled_WithTwoElementList_ReturnsA_Arrow_B_Arrow_Null()
         {
             string[] valueList = { "A", "B" };
-            INode<string> list = valueList.CreateFrom();
+            INode<string> list = valueList.ToSinglyLinkedList();
             Assert.AreEqual("A->B->NULL", list.ToString());
         }
     }

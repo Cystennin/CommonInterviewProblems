@@ -43,14 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArrayUtilities.cs" />
+    <Compile Include="Algorithms\ArraySubsetExtension.cs" />
     <Compile Include="Algorithms\BinarySearchOfSortedArray.cs" />
     <Compile Include="Algorithms\BinarySearchOfUnsortedArray.cs" />
-    <Compile Include="DataStructures\Graphs\LinkedLists\ArrayExtensions.cs" />
     <Compile Include="DataStructures\Graphs\LinkedLists\INode.cs" />
-    <Compile Include="DataStructures\Graphs\LinkedLists\ISinglyLinkedListNode.cs" />
     <Compile Include="DataStructures\Graphs\LinkedLists\NodeInterfaceExtensions.cs" />
-    <Compile Include="DataStructures\Graphs\LinkedLists\SinglyLinkedList.cs" />
+    <Compile Include="DataStructures\Graphs\LinkedLists\SinglyLinkedList_NodeInterfaceExtensions.cs" />
     <Compile Include="Algorithms\FindMostFrequentIntegerInAnArray.cs" />
     <Compile Include="DataStructures\Graphs\LinkedLists\Node.cs" />
     <Compile Include="LogHelper.cs" />

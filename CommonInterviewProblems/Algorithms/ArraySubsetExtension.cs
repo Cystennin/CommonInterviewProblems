@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Raven.Personal.CommonInterviewProblems.DataStructures.Graphs.LinkedLists;
 
-namespace Raven.Personal.CommonInterviewProblems
+namespace Raven.Personal.CommonInterviewProblems.Algorithms
 {
-    public static class ArrayUtilities
+    public static class ArraySubsetExtension
     {
         public static T[] Subset<T>(this T[] array, int startIndex, int length)
         {

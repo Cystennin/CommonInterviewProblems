@@ -12,7 +12,7 @@ namespace Raven.Personal.CommonInterviewProblems.Tests.DataStructures
         public void whenCreateFromArrayExtensionCalled_WithNullValueInArray_ArgumentNullExceptionIsThrown()
         {
             string[] valueList = { null };
-            INode<string> list = valueList.CreateFrom();
+            INode<string> list = valueList.ToSinglyLinkedList();
             Assert.IsNull(list.Child);
         }
 
@@ -20,7 +20,7 @@ namespace Raven.Personal.CommonInterviewProblems.Tests.DataStructures
         public void whenCreateFromArrayExtensionCalled_WithEmptyValueArray_EmptyListIsCreated()
         {
             string[] valueList = { };
-            INode<string> emptyList = valueList.CreateFrom();
+            INode<string> emptyList = valueList.ToSinglyLinkedList();
             Assert.IsNull(emptyList);
         }
 
@@ -28,7 +28,7 @@ namespace Raven.Personal.CommonInterviewProblems.Tests.DataStructures
         public void whenCreateFromArrayExtensionCalled_WithSingleValueInArray_ListWithSingleNodeIsCreated()
         {
             string[] valueList = { "A" };
-            INode<string> list = valueList.CreateFrom();
+            INode<string> list = valueList.ToSinglyLinkedList();
             Assert.IsNotNull(list);
         }
 
@@ -37,7 +37,7 @@ namespace Raven.Personal.CommonInterviewProblems.Tests.DataStructures
         {
             string A = "A";
             string[] valueList = { A };
-            INode<string> list = valueList.CreateFrom();
+            INode<string> list = valueList.ToSinglyLinkedList();
             Assert.AreEqual<string>(A, list?.Value);
         }
 
@@ -46,7 +46,7 @@ namespace Raven.Personal.CommonInterviewProblems.Tests.DataStructures
         {
             string A = "A";
             string[] valueList = { A };
-            INode<string> list = valueList.CreateFrom();
+            INode<string> list = valueList.ToSinglyLinkedList();
             Assert.IsNull(list.Child);
         }
 
@@ -55,7 +55,7 @@ namespace Raven.Personal.CommonInterviewProblems.Tests.DataStructures
         {
             string A = "A";
             string[] valueList = { A , "B"};
-            INode<string> list = valueList.CreateFrom();
+            INode<string> list = valueList.ToSinglyLinkedList();
             Assert.AreEqual<string>(A, list.Value);
         }
 
@@ -64,7 +64,7 @@ namespace Raven.Personal.CommonInterviewProblems.Tests.DataStructures
         {
             string A = "A";
             string[] valueList = { A, "B" };
-            INode<string> list = valueList.CreateFrom();
+            INode<string> list = valueList.ToSinglyLinkedList();
             Assert.IsNotNull(list?.Child);
         }
 
@@ -73,7 +73,7 @@ namespace Raven.Personal.CommonInterviewProblems.Tests.DataStructures
         {
             string B = "B";
             string[] valueList = { "A", B };
-            INode<string> list = valueList.CreateFrom();
+            INode<string> list = valueList.ToSinglyLinkedList();
             Assert.IsNotNull(list?.Child?.Value);
         }
 
@@ -82,7 +82,7 @@ namespace Raven.Personal.CommonInterviewProblems.Tests.DataStructures
         {
             string B = "B";
             string[] valueList = { "A", B };
-            INode<string> list = valueList.CreateFrom();
+            INode<string> list = valueList.ToSinglyLinkedList();
             Assert.AreEqual<string>(B, list?.Child?.Value);
         }
     }

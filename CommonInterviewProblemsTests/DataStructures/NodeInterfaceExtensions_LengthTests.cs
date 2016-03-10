@@ -11,7 +11,7 @@ namespace Raven.Personal.CommonInterviewProblems.Tests.DataStructures
         public void WhenLengthIsCalled_WithSingleElementList_ReturnsOne()
         {
             string[] valueList = { "A" };
-            INode<string> list = valueList.CreateFrom();
+            INode<string> list = valueList.ToSinglyLinkedList();
             Assert.AreEqual(1, list.Length());
         }
 
@@ -19,7 +19,7 @@ namespace Raven.Personal.CommonInterviewProblems.Tests.DataStructures
         public void WhenLengthIsCalled_WithTwoElementList_ReturnsTwo()
         {
             string[] valueList = { "A" , "B"};
-            INode<string> list = valueList.CreateFrom();
+            INode<string> list = valueList.ToSinglyLinkedList();
             Assert.AreEqual(2, list.Length());
         }
     }
