@@ -8,7 +8,6 @@ namespace Raven.Personal.CommonInterviewProblems.DataStructures.Graphs.LinkedLis
 {
     public static class NodeInterfaceExtensions
     {
-
         public static INode<T> GetLastChild<T>(this INode<T> node)
         {
             if (node?.Child == null)
@@ -46,6 +45,42 @@ namespace Raven.Personal.CommonInterviewProblems.DataStructures.Graphs.LinkedLis
                 return stringBuilder.ToString();
             }
             return buildString(node.Child, stringBuilder);
+        }
+
+        public static bool LoopDetected<T>(this INode<T> node)
+        {
+            return detectLoopWithPointers(node, node.Child);
+        }
+
+        private static bool detectLoopWithPointers<T>(INode<T> x, INode<T> y)
+        {
+            if ((null == x) || (null == y))
+            {
+                return false;
+            }
+            if (y.Equals(x))
+            {
+                return true;
+            }
+            if (y.Child != null && y.Child.Equals(x))
+            {
+                return true;
+            }
+            return detectLoopWithPointers(x?.Child, y?.Child?.Child);
+        }
+
+        private static bool detectLoopWithStack<T>(INode<T> node, Stack<INode<T>> pathStack)
+        {
+            if (node.Child.Equals(null))
+            {
+                return false;
+            }
+            else if (!pathStack.Contains(node))
+            {
+                pathStack.Push(node);
+                detectLoopWithStack(node.Child, pathStack);
+            }
+            return true;
         }
 
     }

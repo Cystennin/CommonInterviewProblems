@@ -11,27 +11,7 @@ namespace Raven.Personal.CommonInterviewProblems.DataStructures.Graphs.LinkedLis
     {
         public static INode<T> ToSinglyLinkedList<T>(this T[] arrayToBuildFrom)
         {
-            INode<T> lastNode = null;
-            INode<T> rootNode = null;
-            foreach (T value in arrayToBuildFrom)
-            {
-                if (null == value)
-                {
-                    throw new ArgumentNullException(nameof(arrayToBuildFrom),
-                        $"SinglyLinkedList nodes cannot be created from value arrays containing null values.");
-                }
-                INode<T> newNode = Node<T>.CreateNode(value);
-                if (rootNode == null)
-                {
-                    rootNode = newNode;
-                }
-                if (lastNode != null)
-                {
-                    lastNode.Child = newNode;
-                }
-                lastNode = newNode;
-            }
-            return rootNode;
+            return arrayToBuildFrom.ToLinkedList(false);
         }
 
         public static INode<T> InsertChild<T>(this INode<T> parent, ref INode<T> newChild)

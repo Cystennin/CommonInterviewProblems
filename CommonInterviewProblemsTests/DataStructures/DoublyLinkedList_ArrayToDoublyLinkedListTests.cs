@@ -9,31 +9,32 @@ namespace Raven.Personal.CommonInterviewProblems.Tests.DataStructures
     {
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void whenCreateFromArrayExtensionCalled_WithNullValueInArray_ArgumentNullExceptionIsThrown()
+        public void WhenToDoublyLinkedListIsCalled_WithNullValueInArray_ArgumentNullExceptionIsThrown()
         {
             string[] valueList = { null };
             INode<string> list = valueList.ToDoublyLinkedList();
-            Assert.IsNull(list.Child);
         }
 
         [TestMethod]
-        public void whenCreateFromArrayExtensionCalled_WithEmptyValueArray_EmptyListIsCreated()
+        public void WhenToDoublyLinkedListIsCalled_WithEmptyValueArray_EmptyListIsCreated()
         {
             string[] valueList = { };
             INode<string> emptyList = valueList.ToDoublyLinkedList();
             Assert.IsNull(emptyList);
         }
 
+
         [TestMethod]
-        public void whenCreateFromArrayExtensionCalled_WithSingleValueInArray_ListWithSingleNodeIsCreated()
+        public void WhenToDoublyLinkedListIsCalled_WithSingleValueInArray_ListWithSingleNodeIsCreated()
         {
             string[] valueList = { "A" };
             INode<string> list = valueList.ToDoublyLinkedList();
             Assert.IsNotNull(list);
         }
 
+
         [TestMethod]
-        public void whenCreateFromArrayExtensionCalled_WithSingleValueInArray_ValueOfRootNodeMatchesFirstValueOfArray()
+        public void WhenToDoublyLinkedListIsCalled_WithSingleValueInArray_ValueOfRootNodeMatchesFirstValueOfArray()
         {
             string A = "A";
             string[] valueList = { A };
@@ -42,7 +43,7 @@ namespace Raven.Personal.CommonInterviewProblems.Tests.DataStructures
         }
 
         [TestMethod]
-        public void whenCreateFromArrayExtensionCalled_WithSingleValueInArray_ChildOfRootNodeIsNull()
+        public void WhenToDoublyLinkedListIsCalled_WithSingleValueInArray_ChildOfRootNodeIsNull()
         {
             string A = "A";
             string[] valueList = { A };
@@ -51,7 +52,16 @@ namespace Raven.Personal.CommonInterviewProblems.Tests.DataStructures
         }
 
         [TestMethod]
-        public void whenCreateFromArrayExtensionCalled_WithTwoValuesInArray_ValueOfRootNodeMatchesFirstValueOfArray()
+        public void WhenToDoublyLinkedListIsCalled_WithSingleValueInArray_ParentOfRootNodeIsNull()
+        {
+            string A = "A";
+            string[] valueList = { A };
+            INode<string> list = valueList.ToDoublyLinkedList();
+            Assert.IsNull(list.Parent);
+        }
+
+        [TestMethod]
+        public void WhenToDoublyLinkedListIsCalled_WithTwoValuesInArray_ValueOfRootNodeMatchesFirstValueOfArray()
         {
             string A = "A";
             string[] valueList = { A, "B" };
@@ -60,7 +70,7 @@ namespace Raven.Personal.CommonInterviewProblems.Tests.DataStructures
         }
 
         [TestMethod]
-        public void whenCreateFromArrayExtensionCalled_WithTwoValuesInArray_ChildOfRootNodeIsNotNull()
+        public void WhenToDoublyLinkedListIsCalled_WithTwoValuesInArray_ChildOfRootNodeIsNotNull()
         {
             string A = "A";
             string[] valueList = { A, "B" };
@@ -69,7 +79,7 @@ namespace Raven.Personal.CommonInterviewProblems.Tests.DataStructures
         }
 
         [TestMethod]
-        public void whenCreateFromArrayExtensionCalled_WithTwoValuesInArray_ValueOfChildOfRootNodeIsNotNull()
+        public void WhenToDoublyLinkedListIsCalled_WithTwoValuesInArray_ValueOfChildOfRootNodeIsNotNull()
         {
             string B = "B";
             string[] valueList = { "A", B };
@@ -78,12 +88,21 @@ namespace Raven.Personal.CommonInterviewProblems.Tests.DataStructures
         }
 
         [TestMethod]
-        public void whenCreateFromArrayExtensionCalled_WithTwoValuesInArray_ValueOfChildOfRootNodeMatchesSecondValueOfArray()
+        public void WhenToDoublyLinkedListIsCalled_WithTwoValuesInArray_ValueOfChildOfRootNodeMatchesSecondValueOfArray()
         {
             string B = "B";
             string[] valueList = { "A", B };
-            INode<string> list = valueList.ToSinglyLinkedList();
+            INode<string> list = valueList.ToDoublyLinkedList();
             Assert.AreEqual<string>(B, list?.Child?.Value);
+        }
+
+        [TestMethod]
+        public void WhenToDoublyLinkedListIsCalled_WithTwoValuesInArray_ValueOfParentOfChildOfRootNodeMatchesValueOfRoot()
+        {
+            string B = "B";
+            string[] valueList = { "A", B };
+            INode<string> list = valueList.ToDoublyLinkedList();
+            Assert.AreEqual<string>("A", list?.Child?.Parent?.Value);
         }
     }
 }

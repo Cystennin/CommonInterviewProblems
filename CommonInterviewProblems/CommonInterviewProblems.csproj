@@ -48,6 +48,7 @@
     <Compile Include="Algorithms\BinarySearchOfUnsortedArray.cs" />
     <Compile Include="DataStructures\Graphs\LinkedLists\DoublyLinkedList_NodeInterfaceExtensions.cs" />
     <Compile Include="DataStructures\Graphs\LinkedLists\INode.cs" />
+    <Compile Include="DataStructures\Graphs\LinkedLists\LinkedListCreation_NodeInterfaceExtensions.cs" />
     <Compile Include="DataStructures\Graphs\LinkedLists\NodeInterfaceExtensions.cs" />
     <Compile Include="DataStructures\Graphs\LinkedLists\SinglyLinkedList_NodeInterfaceExtensions.cs" />
     <Compile Include="Algorithms\FindMostFrequentIntegerInAnArray.cs" />

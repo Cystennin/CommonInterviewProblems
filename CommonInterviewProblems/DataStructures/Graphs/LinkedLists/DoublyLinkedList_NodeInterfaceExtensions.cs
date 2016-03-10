@@ -8,5 +8,9 @@ namespace Raven.Personal.CommonInterviewProblems.DataStructures.Graphs.LinkedLis
 {
     public static class DoublyLinkedList_NodeInterfaceExtensions
     {
+        public static INode<T> ToDoublyLinkedList<T>(this T[] sourceArray)
+        {
+            return sourceArray.ToLinkedList(true);
+        }
     }
 }
