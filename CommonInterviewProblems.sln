@@ -3,12 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonInterviewProblems", "CommonInterviewQuestions\CommonInterviewProblems.csproj", "{8C93DA2D-522C-4FE8-B53A-B0CA26AF8F68}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonInterviewProblems", "CommonInterviewProblems\CommonInterviewProblems.csproj", "{8C93DA2D-522C-4FE8-B53A-B0CA26AF8F68}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonInterviewProblemsTests", "CommonInterviewQuestionTests\CommonInterviewProblemsTests.csproj", "{FCF79EA9-D312-4606-B175-EA6325892B46}"
-	ProjectSection(ProjectDependencies) = postProject
-		{8C93DA2D-522C-4FE8-B53A-B0CA26AF8F68} = {8C93DA2D-522C-4FE8-B53A-B0CA26AF8F68}
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonInterviewProblemsTests", "CommonInterviewProblemsTests\CommonInterviewProblemsTests.csproj", "{FCF79EA9-D312-4606-B175-EA6325892B46}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

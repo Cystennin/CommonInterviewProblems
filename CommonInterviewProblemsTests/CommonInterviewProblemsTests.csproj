@@ -73,7 +73,7 @@
     <Compile Include="Algorithms\SubstringImplementationTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CommonInterviewQuestions\CommonInterviewProblems.csproj">
+    <ProjectReference Include="..\CommonInterviewProblems\CommonInterviewProblems.csproj">
       <Project>{8c93da2d-522c-4fe8-b53a-b0ca26af8f68}</Project>
       <Name>CommonInterviewProblems</Name>
     </ProjectReference>
