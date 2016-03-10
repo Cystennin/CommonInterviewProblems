@@ -63,6 +63,7 @@
     <Compile Include="Algorithms\BinarySearchOfUnsortedArrayTests.cs" />
     <Compile Include="Algorithms\FindMostFrequentIntegerTests.cs" />
     <Compile Include="DataStructures\CreateSinglyLinkedListFromArrayOfValuesTests.cs" />
+    <Compile Include="DataStructures\DoublyLinkedList_ArrayToDoublyLinkedListTests.cs" />
     <Compile Include="DataStructures\NodeInterfaceExtensions_LengthTests.cs" />
     <Compile Include="DataStructures\NodeInterfaceExtensions_ToString.cs" />
     <Compile Include="DataStructures\NodeInterfaceExtensions_TraversalTests.cs" />

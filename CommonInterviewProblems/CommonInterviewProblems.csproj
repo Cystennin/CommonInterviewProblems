@@ -46,6 +46,7 @@
     <Compile Include="Algorithms\ArraySubsetExtension.cs" />
     <Compile Include="Algorithms\BinarySearchOfSortedArray.cs" />
     <Compile Include="Algorithms\BinarySearchOfUnsortedArray.cs" />
+    <Compile Include="DataStructures\Graphs\LinkedLists\DoublyLinkedList_NodeInterfaceExtensions.cs" />
     <Compile Include="DataStructures\Graphs\LinkedLists\INode.cs" />
     <Compile Include="DataStructures\Graphs\LinkedLists\NodeInterfaceExtensions.cs" />
     <Compile Include="DataStructures\Graphs\LinkedLists\SinglyLinkedList_NodeInterfaceExtensions.cs" />
