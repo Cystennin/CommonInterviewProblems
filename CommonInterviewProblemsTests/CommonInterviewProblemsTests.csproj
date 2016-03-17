@@ -59,6 +59,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="ActualProblems\EquilibriumIndexTests.cs" />
     <Compile Include="Algorithms\BinarySearchOfSortedArrayTests.cs" />
     <Compile Include="Algorithms\BinarySearchOfUnsortedArrayTests.cs" />
     <Compile Include="Algorithms\FindMostFrequentIntegerTests.cs" />
@@ -71,6 +72,7 @@
     <Compile Include="DataStructures\Graphs\LinkedLists\SinglyLinkedList_InsertChildrenTests.cs" />
     <Compile Include="DataStructures\Graphs\LinkedLists\SinglyLinkedList_RemoveChildTests.cs" />
     <Compile Include="DataStructures\Graphs\LinkedLists\SinglyLinkedList_InsertChildTests.cs" />
+    <Compile Include="DataStructures\Graphs\Trees\TreeNode_TraversalTests.cs" />
     <Compile Include="DataStructures\Graphs\Trees\TreeNodeTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Algorithms\ReverseAStringRecursivelyTests.cs" />

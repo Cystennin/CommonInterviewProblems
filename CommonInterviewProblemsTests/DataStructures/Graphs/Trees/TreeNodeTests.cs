@@ -31,7 +31,7 @@ namespace Raven.Personal.CommonInterviewProblems.Tests.DataStructures.Graphs.Tre
         {
             ITreeNode<string> rootNode = TreeNode<string>.Create("A");
             ITreeNode<string> leftNode = null;
-            ITreeNode<string> returnedNode = rootNode.SetLeft<string>(ref leftNode);
+            ITreeNode<string> returnedNode = rootNode.SetLeft<string>(leftNode);
             Assert.IsTrue(ReferenceEquals(rootNode, returnedNode));
         }
 
@@ -40,7 +40,7 @@ namespace Raven.Personal.CommonInterviewProblems.Tests.DataStructures.Graphs.Tre
         {
             ITreeNode<string> treeNode = TreeNode<string>.Create("A");
             ITreeNode<string> leftNode = null;
-            treeNode.SetLeft<string>(ref leftNode);
+            treeNode.SetLeft<string>(leftNode);
             Assert.IsNull(treeNode.Left);
         }
 
@@ -50,7 +50,7 @@ namespace Raven.Personal.CommonInterviewProblems.Tests.DataStructures.Graphs.Tre
         {
             ITreeNode<string> rootNode = TreeNode<string>.Create("A");
             ITreeNode<string> leftNode = null;
-            ITreeNode<string> returnedNode = rootNode.SetLeft<string>(ref leftNode);
+            ITreeNode<string> returnedNode = rootNode.SetLeft<string>(leftNode);
             Assert.IsTrue(ReferenceEquals(rootNode, returnedNode));
         }
 
@@ -59,7 +59,7 @@ namespace Raven.Personal.CommonInterviewProblems.Tests.DataStructures.Graphs.Tre
         {
             ITreeNode<string> rootNode = TreeNode<string>.Create("A");
             ITreeNode<string> rightNode = null;
-            ITreeNode<string> returnedNode = rootNode.SetRight<string>(ref rightNode);
+            ITreeNode<string> returnedNode = rootNode.SetRight<string>(rightNode);
             Assert.IsTrue(ReferenceEquals(rootNode, returnedNode));
         }
 
@@ -68,7 +68,7 @@ namespace Raven.Personal.CommonInterviewProblems.Tests.DataStructures.Graphs.Tre
         {
             ITreeNode<string> rootNode = TreeNode<string>.Create("root");
             ITreeNode<string> leftNode = TreeNode<string>.Create("left");
-            ITreeNode<string> returnedNode = rootNode.SetLeft<string>(ref leftNode);
+            ITreeNode<string> returnedNode = rootNode.SetLeft<string>(leftNode);
             Assert.IsTrue(ReferenceEquals(rootNode, returnedNode));
         }
 
@@ -77,7 +77,7 @@ namespace Raven.Personal.CommonInterviewProblems.Tests.DataStructures.Graphs.Tre
         {
             ITreeNode<string> rootNode = TreeNode<string>.Create("root");
             ITreeNode<string> rightNode = TreeNode<string>.Create("right");
-            ITreeNode<string> returnedNode = rootNode.SetRight<string>(ref rightNode);
+            ITreeNode<string> returnedNode = rootNode.SetRight<string>(rightNode);
             Assert.IsTrue(ReferenceEquals(rootNode, returnedNode));
         }
 
@@ -86,7 +86,7 @@ namespace Raven.Personal.CommonInterviewProblems.Tests.DataStructures.Graphs.Tre
         {
             ITreeNode<string> treeNode = TreeNode<string>.Create("A");
             ITreeNode<string> rightNode = null;
-            ITreeNode<string> returnedNode = treeNode.SetRight(ref rightNode);
+            ITreeNode<string> returnedNode = treeNode.SetRight(rightNode);
             Assert.IsNull(returnedNode.Right);
         }
 
@@ -95,7 +95,7 @@ namespace Raven.Personal.CommonInterviewProblems.Tests.DataStructures.Graphs.Tre
         {
             ITreeNode<string> rootNode = TreeNode<string>.Create("root");
             ITreeNode<string> leftNode = TreeNode<string>.Create("left");
-            ITreeNode<string> returnedNode = rootNode.SetLeft(ref leftNode);
+            ITreeNode<string> returnedNode = rootNode.SetLeft(leftNode);
             Assert.IsNotNull(returnedNode.Left);
         }
 
@@ -104,7 +104,7 @@ namespace Raven.Personal.CommonInterviewProblems.Tests.DataStructures.Graphs.Tre
         {
             ITreeNode<string> rootNode = TreeNode<string>.Create("root");
             ITreeNode<string> leftNode = TreeNode<string>.Create("left");
-            ITreeNode<string> returnedNode = rootNode.SetLeft(ref leftNode);
+            ITreeNode<string> returnedNode = rootNode.SetLeft(leftNode);
             Assert.IsTrue(object.ReferenceEquals(returnedNode.Left, leftNode));
         }
 
@@ -113,7 +113,7 @@ namespace Raven.Personal.CommonInterviewProblems.Tests.DataStructures.Graphs.Tre
         {
             ITreeNode<string> rootNode = TreeNode<string>.Create("root");
             ITreeNode<string> rightNode = TreeNode<string>.Create("right");
-            ITreeNode<string> returnedNode = rootNode.SetRight(ref rightNode);
+            ITreeNode<string> returnedNode = rootNode.SetRight(rightNode);
             Assert.IsNotNull(returnedNode.Right);
         }
 
@@ -122,7 +122,7 @@ namespace Raven.Personal.CommonInterviewProblems.Tests.DataStructures.Graphs.Tre
         {
             ITreeNode<string> rootNode = TreeNode<string>.Create("root");
             ITreeNode<string> rightNode = TreeNode<string>.Create("left");
-            ITreeNode<string> returnedNode = rootNode.SetRight(ref rightNode);
+            ITreeNode<string> returnedNode = rootNode.SetRight(rightNode);
             Assert.IsTrue(object.ReferenceEquals(returnedNode.Right, rightNode));
         }
 
@@ -131,7 +131,7 @@ namespace Raven.Personal.CommonInterviewProblems.Tests.DataStructures.Graphs.Tre
         {
             ITreeNode<string> rootNode = TreeNode<string>.Create("root");
             ITreeNode<string> leftNode = TreeNode<string>.Create("left");
-            ITreeNode<string> returnedNode = rootNode.SetLeft(ref leftNode);
+            ITreeNode<string> returnedNode = rootNode.SetLeft(leftNode);
             Assert.AreEqual(returnedNode.Left.Value, leftNode.Value);
         }
 
@@ -140,7 +140,7 @@ namespace Raven.Personal.CommonInterviewProblems.Tests.DataStructures.Graphs.Tre
         {
             ITreeNode<string> rootNode = TreeNode<string>.Create("root");
             ITreeNode<string> rightNode = TreeNode<string>.Create("right");
-            ITreeNode<string> returnedNode = rootNode.SetRight(ref rightNode);
+            ITreeNode<string> returnedNode = rootNode.SetRight(rightNode);
             Assert.AreEqual(returnedNode.Right.Value, rightNode.Value);
         }
 
@@ -150,7 +150,7 @@ namespace Raven.Personal.CommonInterviewProblems.Tests.DataStructures.Graphs.Tre
             ITreeNode<string> rootNode = TreeNode<string>.Create("root");
             ITreeNode<string> rightNode = rootNode.Right;
             ITreeNode<string> leftNode = TreeNode<string>.Create("left");
-            ITreeNode<string> returnedNode = rootNode.SetLeft(ref leftNode);
+            ITreeNode<string> returnedNode = rootNode.SetLeft(leftNode);
             Assert.IsTrue(object.ReferenceEquals(returnedNode.Right, rightNode));
         }
 
@@ -160,7 +160,7 @@ namespace Raven.Personal.CommonInterviewProblems.Tests.DataStructures.Graphs.Tre
             ITreeNode<string> rootNode = TreeNode<string>.Create("root");
             ITreeNode<string> rightNode = TreeNode<string>.Create("right");
             ITreeNode<string> leftNode = rootNode.Left;
-            ITreeNode<string> returnedNode = rootNode.SetRight(ref rightNode);
+            ITreeNode<string> returnedNode = rootNode.SetRight(rightNode);
             Assert.IsTrue(object.ReferenceEquals(returnedNode.Left, leftNode));
         }
 
