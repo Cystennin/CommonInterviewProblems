@@ -21,5 +21,7 @@ namespace Raven.Personal.CommonInterviewProblems.DataStructures.Graphs.Trees
         public T Value { get; set; }
         public ITreeNode<T> Left { get; set; }
         public ITreeNode<T> Right { get; set; }
+
+        public ITreeNode<T> Parent { get; set; }
     }
 }

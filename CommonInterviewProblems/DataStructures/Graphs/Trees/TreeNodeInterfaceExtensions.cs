@@ -12,12 +12,14 @@ namespace Raven.Personal.CommonInterviewProblems.DataStructures.Graphs.Trees
     {
         public static ITreeNode<T> SetLeft<T>(this ITreeNode<T> root, ITreeNode<T> child)
         {
+            child.Parent = root;
             root.Left = child;
             return root;
         }
 
         public static ITreeNode<T> SetRight<T>(this ITreeNode<T> root, ITreeNode<T> child)
         {
+            child.Parent = root;
             root.Right = child;
             return root;
         }

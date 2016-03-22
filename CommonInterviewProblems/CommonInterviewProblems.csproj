@@ -57,6 +57,7 @@
     <Compile Include="DataStructures\Graphs\LinkedLists\Node.cs" />
     <Compile Include="DataStructures\Graphs\Trees\ISortedTreeNode.cs" />
     <Compile Include="DataStructures\Graphs\Trees\ITreeNode.cs" />
+    <Compile Include="DataStructures\Graphs\Trees\SortedTreeNode.cs" />
     <Compile Include="DataStructures\Graphs\Trees\TreeNode.cs" />
     <Compile Include="DataStructures\Graphs\Trees\TreeNodeInterfaceExtensions.cs" />
     <Compile Include="LogHelper.cs" />

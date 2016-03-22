@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Raven.Personal.CommonInterviewProblems.DataStructures.Graphs.Trees
 {
-    public interface ISortedTreeNode<T> where T : IComparable, ITreeNode<T>
+    public interface ISortedTreeNode<T> : ITreeNode<T> where T : IComparable<T>
     {
+        ISortedTreeNode<T> Insert(ISortedTreeNode<T> node);
     }
 }

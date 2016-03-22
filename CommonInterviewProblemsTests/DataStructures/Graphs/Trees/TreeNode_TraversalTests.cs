@@ -100,16 +100,17 @@ namespace Raven.Personal.CommonInterviewProblems.Tests.DataStructures.Graphs.Tre
         public void whenTraverseIsCalled_OnNodeWith_LL_RR_L_C_R_RL_RR_ReturnsSame()
         {
             ITreeNode<string> rootNode = TreeNode<string>.Create("C");
-            ITreeNode<string> tree = rootNode.SetLeft(TreeNode<string>.Create("L"));
-            tree = rootNode.SetRight(TreeNode<string>.Create("R"));
-            tree = rootNode.Left.SetLeft(TreeNode<string>.Create("LL"));
-            tree = rootNode.Left.SetRight(TreeNode<string>.Create("LR"));
-            tree = rootNode.Right.SetLeft(TreeNode<string>.Create("RL"));
-            tree = rootNode.Right.SetRight(TreeNode<string>.Create("RR"));
+            rootNode.SetLeft(TreeNode<string>.Create("L"));
+            rootNode.SetRight(TreeNode<string>.Create("R"));
+            rootNode.Left.SetLeft(TreeNode<string>.Create("LL"));
+            rootNode.Left.SetRight(TreeNode<string>.Create("LR"));
+            rootNode.Right.SetLeft(TreeNode<string>.Create("RL"));
+            rootNode.Right.SetRight(TreeNode<string>.Create("RR"));
             List<string> returnedList = rootNode.Traverse();
             List<string> expectedList = new List<string>() { "LL", "RR", "L", "C", "R", "RL","RR" };
             bool areEqual = expectedList.All(returnedList.Contains) && (expectedList.Count == returnedList.Count);
             Assert.IsTrue(areEqual);
         }
+
     }
 }
