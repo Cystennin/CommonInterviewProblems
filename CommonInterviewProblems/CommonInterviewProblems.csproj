@@ -48,6 +48,7 @@
     <Compile Include="Algorithms\BinarySearchOfSortedArray.cs" />
     <Compile Include="Algorithms\BinarySearchOfUnsortedArray.cs" />
     <Compile Include="ActualProblems\ListComparison.cs" />
+    <Compile Include="DataStructures\Collections\HashTable.cs" />
     <Compile Include="DataStructures\Graphs\LinkedLists\DoublyLinkedList_NodeInterfaceExtensions.cs" />
     <Compile Include="DataStructures\Graphs\LinkedLists\INode.cs" />
     <Compile Include="DataStructures\Graphs\LinkedLists\LinkedListCreation_NodeInterfaceExtensions.cs" />
@@ -70,9 +71,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DataStructures\Collections\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
